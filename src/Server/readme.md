@@ -1,4 +1,4 @@
-﻿# Game Server Solution - Updated Architecture Documentation
+﻿﻿# Game Server Solution - Updated Architecture Documentation
 
 ## Solution Structure
 The solution follows clean architecture principles with clear separation of concerns across four projects:

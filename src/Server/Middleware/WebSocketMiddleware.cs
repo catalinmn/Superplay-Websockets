@@ -46,9 +46,9 @@ public class WebSocketMiddleware: IMiddleware
                 _connectionManager.RemoveConnection(connection.PlayerId);
 
                 await webSocket.CloseAsync(
-                    WebSocketCloseStatus.NormalClosure,
-                    "Connection closed",
-                    CancellationToken.None);
+                  WebSocketCloseStatus.NormalClosure,
+                  string.Empty,
+                  CancellationToken.None);
             }
         }
         else
@@ -69,11 +69,7 @@ public class WebSocketMiddleware: IMiddleware
                 new ArraySegment<byte>(buffer), CancellationToken.None);
 
             if (result.MessageType == WebSocketMessageType.Close)
-            {
-                await webSocket.CloseAsync(
-                    WebSocketCloseStatus.NormalClosure,
-                    string.Empty,
-                    CancellationToken.None);
+            {    
                 return;
             }
 
