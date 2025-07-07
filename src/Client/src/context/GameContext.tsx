@@ -20,11 +20,11 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const connectToGame = (deviceId: string) => {
     const ws = new GameWebSocket(`ws://localhost:5000/ws`);
-    
+
     ws.on('open', () => {
       setConnection(ws);
       addActivity('Connected to game server');
-      
+
       // Send login request after connection
       const loginRequest: LoginRequest = {
         MessageType: "LoginRequest",
@@ -33,16 +33,16 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       ws.send(loginRequest);
       addActivity(`Sent: ${JSON.stringify(loginRequest)}`);
     });
-    
+
     ws.on('message', (message: ServerResponse) => {
       handleGameMessage(message);
     });
-    
+
     ws.on('close', () => {
       setConnection(null);
       addActivity('Disconnected from game server');
     });
-    
+
     ws.on('error', (err: Event) => {
       setError('Connection error: ' + err.type);
     });
@@ -50,7 +50,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const handleGameMessage = (message: ServerResponse) => {
     addActivity(`Received: ${JSON.stringify(message)}`);
-    
+
     switch (message.MessageType) {
       case 'LoginResponse':
         setPlayer({
@@ -60,7 +60,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
           rolls: message.InitialRolls
         });
         break;
-      
+
       case 'ResourceUpdateResponse':
         setPlayer(prev => prev ? {
           ...prev,
@@ -68,7 +68,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
           rolls: message.ResourceType === 1 ? message.NewBalance : prev.rolls
         } : null);
         break;
-      
+
       case 'GiftEvent':
         setPlayer(prev => prev ? {
           ...prev,
@@ -77,11 +77,11 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         } : null);
         addActivity(`Received gift: ${message.Amount} ${message.ResourceType === 0 ? 'coins' : 'rolls'} from ${message.FromPlayerId}`);
         break;
-      
+
       case 'ErrorResponse':
         setError(`${message.ErrorCode}: ${message.Message}`);
         break;
-      
+
       default:
         break;
     }
