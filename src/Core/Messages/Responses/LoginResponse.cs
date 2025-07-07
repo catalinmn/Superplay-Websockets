@@ -1,5 +1,4 @@
-﻿// LoginResponse.cs
-namespace Core.Messages.Responses;
+﻿namespace Core.Messages.Responses;
 
 public class LoginResponse: ServerResponse
 {

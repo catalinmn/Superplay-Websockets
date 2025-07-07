@@ -1,16 +1,4 @@
-﻿using Core.Abstractions;
-using Core.Connection;
-using Core.Domain.Enums;
-using Core.Domain.Exceptions;
-using Core.Messages.Requests;
-using Core.Messages.Responses;
-using Core.Services;
-using Infrastructure.Services;
-using System.Net.WebSockets;
-using System.Text;
-using System.Text.Json;
-
-namespace Server.Handlers;
+﻿namespace Server.Handlers;
 
 public class SendGiftHandler : IMessageHandler
 {

@@ -1,12 +1,4 @@
-﻿using Core.Domain.Entities;
-using Core.Domain.Exceptions;
-using Core.Repositories;
-using Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.Extensions.Logging;
-
-namespace Infrastructure.Repositories;
+﻿namespace Infrastructure.Repositories;
 
 public class PlayerRepository : IPlayerRepository
 {

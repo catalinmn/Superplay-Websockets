@@ -1,8 +1,4 @@
-﻿using Core.Domain.Entities;
-using Core.Domain.Exceptions;
-using Core.Repositories;
-using Core.Services;
-using Microsoft.Extensions.Logging;
+﻿namespace Infrastructure.Services;
 
 public class PlayerService : IPlayerService
 {

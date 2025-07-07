@@ -1,6 +1,4 @@
-﻿using System.Net.WebSockets;
-
-namespace Core.Connection;
+﻿namespace Core.Connection;
 
 public class ConnectionData
 {

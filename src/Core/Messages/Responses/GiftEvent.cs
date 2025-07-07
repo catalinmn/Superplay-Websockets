@@ -1,6 +1,4 @@
-﻿using Core.Domain.Enums;
-
-namespace Core.Messages.Responses;
+﻿namespace Core.Messages.Responses;
 
 public class GiftEvent : ServerResponse
 {

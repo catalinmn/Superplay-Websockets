@@ -1,11 +1,4 @@
-﻿using Core.Domain.Entities;
-using Core.Domain.Enums;
-using Core.Domain.Exceptions;
-using Core.Repositories;
-using Core.Services;
-using Microsoft.Extensions.Logging;
-
-namespace Infrastructure.Services;
+﻿namespace Infrastructure.Services;
 
 public class ResourceService : IResourceService
 {

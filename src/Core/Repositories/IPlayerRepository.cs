@@ -1,7 +1,4 @@
-﻿using Core.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Storage;
-
-namespace Core.Repositories;
+﻿namespace Core.Repositories;
 
 public interface IPlayerRepository
 {

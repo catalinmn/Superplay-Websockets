@@ -1,10 +1,4 @@
-﻿using Core.Abstractions;
-using Microsoft.Extensions.Logging;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Net.WebSockets;
-
-namespace Infrastructure.Services;
+﻿namespace Infrastructure.Services;
 
 public class ConnectionManager : IConnectionManager
 {

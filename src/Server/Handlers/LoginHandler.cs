@@ -1,14 +1,4 @@
-﻿using Core.Abstractions;
-using Core.Connection;
-using Core.Domain.Exceptions;
-using Core.Messages.Requests;
-using Core.Messages.Responses;
-using Core.Services;
-using Infrastructure.Services;
-using System.Text.Json;
-using System.Text.RegularExpressions;
-
-namespace Server.Handlers;
+﻿namespace Server.Handlers;
 
 public class LoginHandler : IMessageHandler
 {

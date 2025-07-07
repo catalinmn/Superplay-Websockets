@@ -1,13 +1,4 @@
-﻿using System.Text.Json;
-using Core.Abstractions;
-using Core.Messages.Requests;
-using Core.Messages.Responses;
-using Core.Services;
-using Core.Domain.Exceptions;
-using Core.Domain.Enums;
-using Core.Connection;
-
-namespace Server.Handlers;
+﻿namespace Server.Handlers;
 
 public class UpdateResourcesHandler : IMessageHandler
 {

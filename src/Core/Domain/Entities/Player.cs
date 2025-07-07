@@ -1,10 +1,4 @@
-﻿using Core.Domain.Enums;
-using Core.Domain.Exceptions;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Core.Domain.Entities;
+﻿namespace Core.Domain.Entities;
 
 public class Player
 {

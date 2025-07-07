@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /src/Server/superplay.db-shm
 /src/Server/superplay.db-wal
+/src/Server/superplay.db

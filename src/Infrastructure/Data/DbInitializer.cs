@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-
-namespace Infrastructure.Data;
+﻿namespace Infrastructure.Data;
 
 public class DbInitializer
 {

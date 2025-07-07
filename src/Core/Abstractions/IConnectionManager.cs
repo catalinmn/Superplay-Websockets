@@ -1,5 +1,4 @@
-﻿using System.Net.WebSockets;
-
+﻿
 namespace Core.Abstractions;
 
 public interface IConnectionManager

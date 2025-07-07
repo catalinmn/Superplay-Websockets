@@ -1,8 +1,4 @@
-﻿using System.Text.Json;
-using Core.Messages.Responses;
-using Core.Connection;
-
-namespace Core.Abstractions;
+﻿namespace Core.Abstractions;
 
 public interface IMessageHandler
 {

@@ -1,12 +1,4 @@
-using Core.Abstractions;
-using Infrastructure.Data;
-using Infrastructure.Extensions;
-using Infrastructure.Services;
-using Serilog;
-using Server;
-using Server.Handlers;
-using Server.Middleware;
-using System.Threading.RateLimiting;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

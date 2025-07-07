@@ -1,6 +1,4 @@
-﻿using Core.Messages.Responses;
-
-namespace Core.Abstractions;
+﻿namespace Core.Abstractions;
 
 public interface IMessageHandlerFactory
 {

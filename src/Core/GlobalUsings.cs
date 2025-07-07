@@ -1,0 +1,10 @@
+global using Core.Connection;
+global using Core.Domain.Entities;
+global using Core.Domain.Enums;
+global using Core.Domain.Exceptions;
+global using Core.Messages.Responses;
+global using Microsoft.EntityFrameworkCore.Storage;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using System.Text.Json;
+global using System.Net.WebSockets;

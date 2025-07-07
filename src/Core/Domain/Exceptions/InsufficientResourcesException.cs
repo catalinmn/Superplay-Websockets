@@ -1,6 +1,4 @@
-﻿using Core.Domain.Enums;
-
-namespace Core.Domain.Exceptions;
+﻿namespace Core.Domain.Exceptions;
 
 public class InsufficientResourcesException : Exception
 {

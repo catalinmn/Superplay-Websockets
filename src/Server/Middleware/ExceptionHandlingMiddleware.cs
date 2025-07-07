@@ -1,9 +1,4 @@
-﻿using Core.Domain.Exceptions;
-using Core.Messages.Responses;
-using Microsoft.AspNetCore.Http;
-using System.Text.Json;
-
-namespace Server.Middleware;
+﻿namespace Server.Middleware;
 
 public class ExceptionHandlingMiddleware
 {

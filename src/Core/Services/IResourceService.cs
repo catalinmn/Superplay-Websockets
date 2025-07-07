@@ -1,6 +1,4 @@
-﻿using Core.Domain.Enums;
-
-namespace Core.Services;
+﻿namespace Core.Services;
 
 public interface IResourceService
 {

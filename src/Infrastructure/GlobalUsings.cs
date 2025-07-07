@@ -1,0 +1,16 @@
+global using Core.Abstractions;
+global using Core.Domain.Entities;
+global using Core.Domain.Enums;
+global using Core.Domain.Exceptions;
+global using Core.Repositories;
+global using Core.Services;
+global using Infrastructure.Data;
+global using Infrastructure.Repositories;
+global using Infrastructure.Services;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Collections.Concurrent;
+global using System.Net.WebSockets;
+global using Microsoft.EntityFrameworkCore.Storage;

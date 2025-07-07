@@ -1,9 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Core.Domain.Enums;
-
-namespace Core.Domain.Entities;
+﻿namespace Core.Domain.Entities;
 
 public class GiftTransaction
 {

@@ -1,13 +1,4 @@
-﻿using Core.Abstractions;
-using Core.Connection;
-using Core.Messages.Responses;
-using Infrastructure.Services;
-using System.Net.WebSockets;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-
-namespace Server.Middleware;
+﻿namespace Server.Middleware;
 
 public class WebSocketMiddleware: IMiddleware
 {

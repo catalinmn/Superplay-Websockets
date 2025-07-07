@@ -1,5 +1,4 @@
-﻿// LoginRequest.cs
-namespace Core.Messages.Requests;
+﻿namespace Core.Messages.Requests;
 
 public class LoginRequest
 {

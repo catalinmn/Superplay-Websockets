@@ -1,7 +1,4 @@
-﻿// SendGiftRequest.cs
-using Core.Domain.Enums;
-
-namespace Core.Messages.Requests;
+﻿namespace Core.Messages.Requests;
 
 public class SendGiftRequest
 {
