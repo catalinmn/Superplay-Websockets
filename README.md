@@ -67,7 +67,9 @@ Solution/
 
 **Implementation**:
 Client->>+Server: WebSocket Upgrade
+
 Server->>Middleware: HTTP → WS
+
 loop Game Session
     Client->>Server: JSON Message
     Server->>HandlerFactory: Route by MessageType
