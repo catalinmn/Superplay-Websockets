@@ -66,6 +66,7 @@ Solution/
 - Persistent connections for game state
 
 **Implementation**:
+
 Client->>+Server: WebSocket Upgrade
 
 Server->>Middleware: HTTP → WS
