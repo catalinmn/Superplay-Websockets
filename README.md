@@ -7,31 +7,44 @@ Core/
 ├── Connection/       # Connection management abstractions
 
 ├── Domain/           # Business entities and logic
+
 ├── Services/         # Application service interfaces
+
 ├── Messages/         # Request/response contracts
+
 └── Abstractions/     # Infrastructure contracts
 
 ### Infrastructure Project (Persistence Layer)
 Infrastructure/
+
 ├── Data/             # Database context and migrations
+
 ├── Repositories/     # Persistence implementations
+
 └── Services/         # Concrete service implementations
 
 ### Server Project (Presentation Layer)
 Server/
+
 ├── Handlers/         # Message processors
+
 ├── Middleware/       # Custom pipeline components
+
 └── Program.cs        # Entry point with DI
 
 
 ### Client Project (Testing)
 Client/
+
 ├── Services/         # WebSocket client
+
 └── Dockerfile        # Docker configuration for client
 
 ### Solution Items 
 Solution/
+
 └── Dockerfile        # Docker configuration for server
+
 ---
 
 ## Key Architecture Decisions
