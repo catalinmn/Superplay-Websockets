@@ -1,0 +1,22 @@
+services:
+  client:
+    container_name: client
+    build:
+      context: ./src/Client  
+      dockerfile: Dockerfile  
+    ports:
+      - "4200:4200"
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider
+    depends_on:
+      - server
+
+  server:
+    container_name: server
+    build:
+      context: .  
+      dockerfile: Dockerfile  
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_URLS=http://+:5000

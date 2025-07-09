@@ -22,9 +22,6 @@ builder.Services.Scan(scan => scan
 // Register message handler factory
 builder.Services.AddScoped<IMessageHandlerFactory, MessageHandlerFactory>();
 
-//Use port 5000 with localhost binding
-builder.WebHost.UseUrls("http://localhost:5000");
-
 //Rate Limiting Configuration
 builder.Services.AddRateLimiter(options =>
 {
