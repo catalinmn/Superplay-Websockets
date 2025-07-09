@@ -23,11 +23,15 @@ Server/
 ├── Middleware/       # Custom pipeline components
 └── Program.cs        # Entry point with DI
 
+
 ### Client Project (Testing)
 Client/
 ├── Services/         # WebSocket client
-└── Scenarios/        # Integration tests
+└── Dockerfile        # Docker configuration for client
 
+### Solution Items 
+Solution/
+└── Dockerfile        # Docker configuration for server
 ---
 
 ## Key Architecture Decisions
@@ -162,6 +166,69 @@ end
 
 ---
 
+## Docker Compose and Application Startup
+
+### Docker Compose
+The solution includes a `docker-compose.yml` file to orchestrate both the server and client containers. The configuration ensures communication between the server and client.
+
+#### Docker Compose File Structuredocker-compose.yml
+services:
+  client:
+    container_name: client
+    build:
+      context: ./src/Client
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    depends_on:
+      - server
+
+  server:
+    container_name: server
+    build:
+      context: ./src/Server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+### How to Start the Application
+
+#### Option 1: Start Client and Server Separately
+1. **Start the Server**:
+   - Navigate to the `src/Server` directory.
+   - Run the following command: 
+ ```bash
+ dotnet run
+ ```  
+ - Or set Server as startup project in Visual Studio and run it.
+ - The server will start and listen on `http://localhost:5000`.
+
+2. **Start the Client**:
+   - Navigate to the `src/Client` directory.
+   - Run the following commands: 
+ ```bash
+ npm install
+ npm run start
+ ```  
+ - The client will start and listen on `http://localhost:4200`.
+
+#### Option 2: Use Docker Compose
+1. **Build and Start Containers**:
+   - Navigate to the solution directory.
+   - Run the following command: 
+ ```bash
+ docker-compose up --build
+ ```   
+ - Or set the docker-compose as startup project in Visual Studio and run it.
+ - This will build and start both the server and client containers.
+
+2. **Access the Applications**:
+   - Server: `http://localhost:5000`
+   - Client: `http://localhost:4200`
+
+---
+
 ## Why This Architecture Works
 
 ### 1. Requirement Alignment
@@ -190,5 +257,4 @@ end
 - **Scalability**: Handler-based processing allows horizontal scaling
 - **Reliability**: Transactional operations ensure data consistency
 - **Extensibility**: New features can be added cleanly
-- **Testability**: Comprehensive testing at all layers
 - **Professionalism**: Industry-standard patterns and practices
