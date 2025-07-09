@@ -3,7 +3,9 @@ The solution follows clean architecture principles with clear separation of conc
 
 ### Core Project (Domain Layer)
 Core/
+
 ├── Connection/       # Connection management abstractions
+
 ├── Domain/           # Business entities and logic
 ├── Services/         # Application service interfaces
 ├── Messages/         # Request/response contracts
