@@ -71,12 +71,19 @@ Client->>+Server: WebSocket Upgrade
 Server->>Middleware: HTTP → WS
 
 loop Game Session
+
     Client->>Server: JSON Message
+    
     Server->>HandlerFactory: Route by MessageType
+    
     HandlerFactory->>Handler: Execute
+    
     Handler->>Service: Business Logic
+    
     Service->>Repository: DB Operations
+    
     Handler->>Client: JSON Response
+    
 end
 
 ### 3. Handler Pattern for Messages
